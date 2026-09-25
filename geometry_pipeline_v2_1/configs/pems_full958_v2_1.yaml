@@ -1,0 +1,43 @@
+dataset:
+  name: PEMS_SF_full958
+  representation: lowrank
+  label_column: diagnosis
+  positive_label: weekend
+  negative_label: weekday
+  id_column: sample_id
+  expected_nodes: 958
+
+paths:
+  info_file: /Users/nicolaamoroso/Desktop/NAT_COMMS/density_operator_multidomain/datasets/PEMS-SF_full958_lowrank/info.csv
+  factors_file: /Users/nicolaamoroso/Desktop/NAT_COMMS/density_operator_multidomain/datasets/PEMS-SF_full958_lowrank/factors.npz
+  geometry_dir: /Users/nicolaamoroso/Desktop/NAT_COMMS/density_operator_multidomain/datasets/PEMS-SF_full958_geometry
+  output_root: /Users/nicolaamoroso/Desktop/Geometry_2.0/pipeline_PEMS_full958_v2_1
+
+science:
+  p_values: [1, 1.25, 1.5, 1.75, 2, 3, 4, 8, 16]
+  reference_p: 1
+
+cv:
+  n_repeats: 20
+  n_splits: 5
+  inner_splits: 5
+  random_state: 42
+
+pipeline:
+  stages: [classifier, spectral, decision, xai, summary]
+
+spectral:
+  n_resamples: 300
+  subject_fraction: 0.8
+  random_state: 42
+
+xai:
+  top_n_ranks: 20
+  validation_pairs: 300
+  random_state: 42
+  parallel_backend: auto
+  workers: 0
+  autotune_pairs: 48
+
+plotting:
+  dpi: 220

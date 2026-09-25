@@ -1,0 +1,36 @@
+dataset:
+  name: toy
+  representation: dense
+  label_column: label
+  positive_label: POSITIVE
+  negative_label: NEGATIVE
+  matrix_glob: "adjacency_*.csv"
+  matrix_format: csv
+
+paths:
+  data_dir: examples/toy_example/data
+  info_file: examples/toy_example/info.csv
+  output_root: examples/toy_example/output
+
+science:
+  p_values:
+    - 1.0
+    - 1.5
+    - 2.0
+    - 4.0
+    - 16.0
+  reference_p: 1.0
+
+cv:
+  n_repeats: 2
+  n_splits: 3
+  inner_splits: 2
+  random_state: 42
+
+pipeline:
+  stages:
+    - classifier
+    - spectral
+    - decision
+    - xai
+    - summary

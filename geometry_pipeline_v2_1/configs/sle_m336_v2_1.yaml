@@ -1,0 +1,47 @@
+dataset:
+  name: SLE_scRNAseq_m336
+  label_column: diagnosis
+  positive_label: systemic lupus erythematosus
+  negative_label: normal
+  id_column: sample_id
+  matrix_glob: "adjacency_*.csv"
+  matrix_format: auto
+  delimiter: null
+  expected_nodes: 336
+  diagonal: unit
+  symmetrize: true
+  psd_tolerance: 1.0e-8
+
+paths:
+  data_dir: /Users/nicolaamoroso/Desktop/NAT_COMMS/density_operator_multidomain/datasets/SLE_m336
+  info_file: /Users/nicolaamoroso/Desktop/NAT_COMMS/density_operator_multidomain/datasets/SLE_m336/info.csv
+  output_root: /Users/nicolaamoroso/Desktop/Geometry_2.0/pipeline_SLE_m336_v2_1
+
+science:
+  p_values: [1, 1.25, 1.5, 1.75, 2, 3, 4, 8, 16]
+  reference_p: 1
+
+cv:
+  n_repeats: 20
+  n_splits: 5
+  inner_splits: 5
+  random_state: 42
+
+pipeline:
+  stages: [classifier, spectral, decision, xai, summary]
+
+spectral:
+  n_resamples: 300
+  subject_fraction: 0.8
+  random_state: 42
+
+xai:
+  top_n_ranks: 20
+  validation_pairs: 300
+  random_state: 42
+  parallel_backend: auto
+  workers: 0
+  autotune_pairs: 48
+
+plotting:
+  dpi: 220

@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.ipynb_checkpoints/
+
+examples/toy_example/data/
+examples/toy_example/output/
+examples/toy_example/info.csv
+
+*.log
+*.tmp
