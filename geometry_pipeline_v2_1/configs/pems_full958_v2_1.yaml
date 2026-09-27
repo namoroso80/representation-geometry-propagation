@@ -8,10 +8,10 @@ dataset:
   expected_nodes: 958
 
 paths:
-  info_file: /Users/nicolaamoroso/Desktop/NAT_COMMS/density_operator_multidomain/datasets/PEMS-SF_full958_lowrank/info.csv
-  factors_file: /Users/nicolaamoroso/Desktop/NAT_COMMS/density_operator_multidomain/datasets/PEMS-SF_full958_lowrank/factors.npz
-  geometry_dir: /Users/nicolaamoroso/Desktop/NAT_COMMS/density_operator_multidomain/datasets/PEMS-SF_full958_geometry
-  output_root: /Users/nicolaamoroso/Desktop/Geometry_2.0/pipeline_PEMS_full958_v2_1
+  info_file: datasets/PEMS-SF_full958_lowrank/info.csv
+  factors_file: datasets/PEMS-SF_full958_lowrank/factors.npz
+  geometry_dir: datasets/PEMS-SF_full958_geometry
+  output_root: outputs/pipeline_PEMS_full958_v2_1
 
 science:
   p_values: [1, 1.25, 1.5, 1.75, 2, 3, 4, 8, 16]

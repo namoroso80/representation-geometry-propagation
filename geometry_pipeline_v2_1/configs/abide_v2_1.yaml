@@ -13,9 +13,9 @@ dataset:
   psd_tolerance: 1.0e-8
 
 paths:
-  data_dir: /Users/nicolaamoroso/Desktop/NAT_COMMS/density_operator_multidomain/datasets/ABIDE_fMRI
-  info_file: /Users/nicolaamoroso/Desktop/NAT_COMMS/density_operator_multidomain/datasets/ABIDE_fMRI/info.csv
-  output_root: /Users/nicolaamoroso/Desktop/Geometry_2.0/pipeline_ABIDE_v2_1
+  data_dir: datasets/ABIDE_fMRI
+  info_file: datasets/ABIDE_fMRI/info.csv
+  output_root: outputs/pipeline_ABIDE_v2_1
 
 science:
   p_values: [1, 1.25, 1.5, 1.75, 2, 3, 4, 8, 16]

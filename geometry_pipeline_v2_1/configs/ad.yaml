@@ -13,9 +13,9 @@ dataset:
   psd_tolerance: 1.0e-8
 
 paths:
-  data_dir: /Users/nicolaamoroso/Desktop/NAT_COMMS/density_operator_multidomain/datasets/patch_adjacency_matrices_403
-  info_file: /Users/nicolaamoroso/Desktop/NAT_COMMS/density_operator_multidomain/datasets/patch_adjacency_matrices_403/info403.csv
-  output_root: /Users/nicolaamoroso/Desktop/Geometry_2.0/pipeline_AD_v2
+  data_dir: datasets/patch_adjacency_matrices_403
+  info_file: datasets/patch_adjacency_matrices_403/info403.csv
+  output_root: outputs/pipeline_AD_v2
 
 science:
   p_values: [1, 1.25, 1.5, 1.75, 2, 3, 4, 8, 16]
