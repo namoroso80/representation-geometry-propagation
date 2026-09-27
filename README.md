@@ -12,11 +12,11 @@ This repository contains the computational framework used to study how controlle
 
 Empirical observations are represented as positive-semidefinite, unit-trace operators. Geometry is continuously deformed through the Schatten family
 
-d_p(rho_i,rho_j) = ||rho_i-rho_j||_p
+$d_p(rho_i,rho_j) = ||rho_i-rho_j||_p$
 
 and its propagation is followed through
 
-rho -> D_p -> K_p -> f_p -> XAI_p,
+$rho -> D_p -> K_p -> f_p -> XAI_p$,
 
 from operator geometry to pairwise distances, kernel representations, fitted decisions and perturbation-based explanations.
 
