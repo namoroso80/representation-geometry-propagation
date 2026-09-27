@@ -145,7 +145,7 @@ A Conda environment can be created with:
 
 The version of the code corresponding to the manuscript will be permanently archived on Zenodo.
 
-- GitHub: [to be added]
+- GitHub: [https://github.com/namoroso80/representation-geometry-propagation]
 - Zenodo DOI: [to be added]
 
 ## Citation
